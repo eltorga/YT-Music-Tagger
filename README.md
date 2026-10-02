@@ -1,8 +1,10 @@
-# 🎵 YT Music Tagger
+![YT Music Tagger](https://github.com/eltorga/Youtube-Music-Tagger/blob/main/images/ytmtagger.png?raw=true)
 
 <p align="center">
   <b>A simple and modern MP3 metadata editor for Windows.</b>
 </p>
+
+![YT Music Tagger Screenshot](https://github.com/eltorga/Youtube-Music-Tagger/blob/main/images/2026-10-02.png?raw=true)
 
 <p align="center">
   Edit song titles, artists, albums, cover art and filenames directly from a clean desktop interface.
