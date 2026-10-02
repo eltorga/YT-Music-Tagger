@@ -196,6 +196,8 @@ if Command Prompt or Windows Terminal works correctly on your system.
 
 # 🎵 How to Use YT Music Tagger
 
+![YT Music Tagger Screenshot](https://github.com/eltorga/Youtube-Music-Tagger/blob/main/images/playing.png?raw=true)
+
 Using the application is simple.
 
 ---
