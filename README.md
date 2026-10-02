@@ -1,34 +1,30 @@
 # 🎵 YT Music Tagger
 
 <p align="center">
-  <b>A simple MP3 metadata editor for Windows, built with Electron.</b>
+  <b>A simple and modern MP3 metadata editor for Windows.</b>
 </p>
 
 <p align="center">
-  Edit titles, artists, albums, cover art and filenames directly from a modern interface inspired by YouTube Music.
+  Edit song titles, artists, albums, cover art and filenames directly from a clean desktop interface.
 </p>
 
 ---
 
 ## ✨ About
 
-**YT Music Tagger** is a simple desktop application designed to make editing MP3 metadata easy.
+**YT Music Tagger** is a lightweight desktop application for editing MP3 metadata.
 
-It was created especially for people who organize their own music library or upload personal music files to services such as YouTube Music.
+It is designed for users who want an easy way to organize their personal music library without using complicated tagging software.
 
-You don't need to know anything about programming or ID3 tags.
+The application lets you open an MP3 file, edit its metadata, replace its cover art and save the changes directly to the original file.
 
-Simply open an MP3 file, edit its information, add a cover and press **Save Changes**.
-
-The application modifies the original MP3 directly.
-
-> YT Music Tagger is an independent project and is not affiliated with YouTube, YouTube Music or Google.
+> YT Music Tagger is an independent project and is not affiliated with YouTube, YouTube Music, or Google.
 
 ---
 
 ## 🎧 Features
 
-- 🎵 Open MP3 files directly from your computer
+- 🎵 Open `.mp3` files from your computer
 - 🖱️ Drag and drop MP3 files into the application
 - ✏️ Edit song title
 - 👤 Edit artist
@@ -37,38 +33,31 @@ The application modifies the original MP3 directly.
 - 📅 Edit year
 - 🎶 Edit genre
 - 🔢 Edit track number
+- 📁 Rename the physical MP3 file
 - 🖼️ Add or replace album artwork
 - 🖱️ Drag and drop JPG, PNG or WEBP cover images
-- 📁 Rename the original MP3 file
-- 💾 Save directly to the original file
-- ⚠️ Warning when opening another song with unsaved changes
-- ⚠️ Warning when closing the program with unsaved changes
 - ▶️ Built-in audio preview
+- 💾 Save changes directly to the original MP3
+- ⚠️ Warning when opening another song with unsaved changes
+- ⚠️ Warning before closing the application with unsaved changes
 - ⌨️ Keyboard shortcuts
-- 🌙 Modern dark interface inspired by YouTube Music
-- 🔒 Works locally — your music is not uploaded anywhere
+- 🌙 Modern dark interface
+- 🔒 Local processing
+- ☁️ No cloud upload required
 
 ---
 
-# 📥 Installation
+# 📥 Download
 
-There are two ways to use YT Music Tagger.
+Go to the **Releases** section of this repository and download the latest version.
 
-For most users, the easiest method is the one described below.
-
----
-
-## 1. Download YT Music Tagger
-
-Go to the **Releases** section of this repository.
-
-Download the latest:
+For version 1.1:
 
 ```text
-YT-Music-Tagger-v1.1.zip
+YT-Music-Tagger-v1.1-English.zip
 ```
 
-After downloading it, extract the ZIP file.
+After downloading the ZIP file, extract it to a normal folder.
 
 For example:
 
@@ -76,40 +65,43 @@ For example:
 C:\YT-Music-Tagger
 ```
 
-> Do not run the program directly from inside the ZIP file.
+> Do not run the application directly from inside the ZIP file.
 
 ---
 
-# 🟢 First-time installation
+# 🟢 Requirements
 
-YT Music Tagger is built with Electron, so the development version requires **Node.js**.
+YT Music Tagger currently requires:
 
-## 2. Install Node.js
+```text
+Windows 10 or newer
+Node.js 22 or newer
+```
 
-If Node.js is not installed on your computer, download and install **Node.js 22 or newer**.
-
-Official website:
+Download Node.js from:
 
 https://nodejs.org/
 
-During installation, you can leave the default options enabled.
+During installation, keep the default options enabled.
 
-Make sure Node.js is added to the Windows `PATH`.
+Make sure Node.js is added to your Windows `PATH`.
 
 ---
 
-## 3. Open the YT Music Tagger folder
+# 🚀 First-Time Installation
 
-After extracting the downloaded ZIP, you should see files similar to these:
+After extracting the ZIP file, open the YT Music Tagger folder.
+
+You should see files similar to:
 
 ```text
 YT-Music-Tagger
 │
-├── INSTALAR_Y_EJECUTAR_SIN_TERMINAL.vbs
-├── EJECUTAR_SIN_TERMINAL.vbs
-├── INSTALAR_Y_EJECUTAR.bat
-├── EJECUTAR.bat
-├── CREAR_EXE.bat
+├── INSTALL_AND_RUN_NO_TERMINAL.vbs
+├── RUN_NO_TERMINAL.vbs
+├── INSTALL_AND_RUN.bat
+├── RUN.bat
+├── BUILD_EXE.bat
 │
 ├── main.js
 ├── preload.js
@@ -120,29 +112,28 @@ YT-Music-Tagger
 └── README.md
 ```
 
----
-
-## 4. Run the installer
-
 For the first installation, double-click:
 
 ```text
-INSTALAR_Y_EJECUTAR_SIN_TERMINAL.vbs
+INSTALL_AND_RUN_NO_TERMINAL.vbs
 ```
 
 This is the recommended installation method.
 
-The script will install the required dependencies and then automatically launch YT Music Tagger.
+The installer will:
 
-The first installation may take a few minutes because Electron and the required packages need to be downloaded.
+1. Check if Node.js is installed.
+2. Install the required dependencies.
+3. Install Electron.
+4. Launch YT Music Tagger automatically.
 
-An internet connection is required only for this installation step.
+The first installation may take a few minutes because the required packages need to be downloaded.
 
 ---
 
-## 🪟 Windows Terminal configuration error
+# 🪟 Windows Terminal Configuration Error
 
-Some Windows installations may display an error similar to:
+Some Windows systems may display an error similar to:
 
 ```text
 Error loading settings
@@ -151,67 +142,87 @@ Syntax error:
 value, object or array expected
 ```
 
-This error comes from **Windows Terminal configuration**, not from YT Music Tagger.
+This error belongs to **Windows Terminal configuration** and is not caused by YT Music Tagger.
 
 If this happens, use:
 
 ```text
-INSTALAR_Y_EJECUTAR_SIN_TERMINAL.vbs
+INSTALL_AND_RUN_NO_TERMINAL.vbs
 ```
 
 instead of:
 
 ```text
-INSTALAR_Y_EJECUTAR.bat
+INSTALL_AND_RUN.bat
 ```
 
-The `.vbs` version installs and launches the application without depending on Windows Terminal.
+The `.vbs` installer runs the installation without depending on Windows Terminal.
+
+If the installation itself fails, a file called:
+
+```text
+installation.log
+```
+
+will be created inside the YT Music Tagger folder.
+
+This file contains the installation error details.
 
 ---
 
-# 🚀 Opening the application after installation
+# ▶️ Opening YT Music Tagger After Installation
 
-After completing the first installation, you do not need to install everything again.
+After the first installation, you do not need to install the dependencies again.
 
 Simply double-click:
 
 ```text
-EJECUTAR_SIN_TERMINAL.vbs
+RUN_NO_TERMINAL.vbs
 ```
 
-YT Music Tagger will open.
+YT Music Tagger will open normally.
+
+You can also use:
+
+```text
+RUN.bat
+```
+
+if Command Prompt or Windows Terminal works correctly on your system.
 
 ---
 
-# 🎵 How to use YT Music Tagger
+# 🎵 How to Use YT Music Tagger
 
-Using the program is very simple.
+Using the application is simple.
 
-## 1. Open an MP3
+---
+
+## 1. Open an MP3 File
 
 Click:
 
 ```text
-Abrir canción
+Open song
 ```
 
-and select an `.mp3` file.
+and select an `.mp3` file from your computer.
 
-You can also drag an MP3 directly into the YT Music Tagger window.
+You can also drag an MP3 directly into the application window.
 
-For example:
+Example:
 
 ```text
 My Song.mp3
 ```
 
-The program will automatically read the metadata stored inside the file.
+YT Music Tagger will automatically read the metadata stored inside the file.
 
 ---
 
-## 2. Edit the song information
+## 2. Edit the Song Information
 
-You can modify:
+You can edit:
 
 ```text
 Title
@@ -221,16 +232,10 @@ Album Artist
 Year
 Genre
 Track Number
-Filename
+Physical Filename
 ```
 
-For example, your original file might be:
-
-```text
-01 - My Artist - My Song.mp3
-```
-
-But its metadata can be:
+For example:
 
 ```text
 Title:
@@ -241,76 +246,70 @@ My Artist
 
 Album:
 My Album
-```
 
-This allows music players and services to display a clean song title even if the physical filename contains additional information.
+Album Artist:
+My Artist
+
+Year:
+2026
+
+Genre:
+Electronic
+
+Track Number:
+1
+```
 
 ---
 
-# 📁 Filename vs Song Title
+# 📁 Song Title vs Filename
 
-This is an important distinction.
+The song title and the physical filename are different values.
 
-The physical file might be:
+For example, your physical file can be:
 
 ```text
 01 - My Artist - My Song.mp3
 ```
 
-while the internal song title can be:
-
-```text
-My Song
-```
-
-YT Music Tagger lets you edit both independently.
-
----
-
-## ⚠️ Why `.mp3` is not removed
-
-YT Music Tagger intentionally keeps:
-
-```text
-.mp3
-```
-
-at the end of the physical file.
-
-For example:
-
-```text
-My Song.mp3
-```
-
-Removing the extension completely could prevent Windows, music players or other applications from automatically recognizing the file as an MP3.
-
-Instead, simply use:
+while the internal metadata can be:
 
 ```text
 Title:
 My Song
 ```
 
-The filename remains:
+This allows music players and services to display a clean song title even if the physical filename contains additional information.
+
+---
+
+# ⚠️ Why `.mp3` Is Not Removed
+
+YT Music Tagger intentionally keeps the `.mp3` extension on the physical file.
+
+Correct:
 
 ```text
 My Song.mp3
 ```
 
-while the internal title is:
+The internal metadata title can still be:
 
 ```text
 My Song
 ```
 
+Removing the real `.mp3` extension could cause Windows, music players or other applications to stop recognizing the file automatically.
+
+If your goal is to make the song appear without `.mp3` in a music library, edit the **Title** field instead of removing the physical extension.
+
 ---
 
-# 🖼️ Changing the cover
+# 🖼️ Changing the Cover Art
 
-First open an MP3.
+First, open an MP3 file.
 
-Then drag an image directly onto the cover area.
+Then drag an image onto the cover area.
 
 Supported image formats:
 
@@ -323,51 +322,49 @@ WEBP
 
 You can also click the cover area and select an image manually.
 
-The new artwork will immediately appear inside the application.
+The new artwork will appear immediately in the application.
 
-However, it is not written to the MP3 until you press:
+However, the cover is not written to the MP3 until you click:
 
 ```text
-Guardar cambios
+Save changes
 ```
 
 ---
 
-# 💾 Saving your changes
+# 💾 Saving Changes
 
-When you modify any information, YT Music Tagger will show:
-
-```text
-Cambios sin guardar
-```
-
-Press:
+When you modify any information, YT Music Tagger will display:
 
 ```text
-Guardar cambios
+Unsaved changes
 ```
 
-The program will write the metadata directly into the MP3 you opened.
+Click:
+
+```text
+Save changes
+```
+
+The metadata will be written directly to the MP3 file you opened.
 
 No new MP3 needs to be downloaded.
-
-No duplicate is intentionally created.
 
 The original file itself is updated.
 
 After saving, the application will display:
 
 ```text
-Todos los cambios guardados
+All changes saved
 ```
 
 ---
 
-# ⚠️ Unsaved changes protection
+# ⚠️ Unsaved Changes Protection
 
-If you edit a song and try to open another MP3 without saving, the application will warn you.
+If you modify a song and try to open another MP3 before saving, YT Music Tagger will warn you.
 
-You can choose whether to:
+You can choose:
 
 ```text
 Cancel
@@ -385,23 +382,22 @@ This helps prevent accidentally losing your edits.
 
 ---
 
-# ▶️ Audio preview
+# ▶️ Audio Preview
 
-After opening an MP3, an audio player appears inside the application.
+YT Music Tagger includes a built-in audio player.
 
-You can use it to quickly confirm that you opened the correct song before editing its metadata.
+After opening an MP3, you can play the song directly inside the application.
+
+This is useful for confirming that you selected the correct file before editing its metadata.
 
 ---
 
-# ⌨️ Keyboard shortcuts
+# ⌨️ Keyboard Shortcuts
 
-```text
-Ctrl + O
-Open an MP3
-
-Ctrl + S
-Save changes
-```
+| Shortcut | Action |
+|---|---|
+| `Ctrl + O` | Open an MP3 |
+| `Ctrl + S` | Save changes |
 
 ---
 
@@ -409,15 +405,15 @@ Save changes
 
 YT Music Tagger works locally on your computer.
 
-Your MP3 files and cover images are not intentionally uploaded to a server.
+Your MP3 files and cover images do not need to be uploaded to an external server in order to edit their metadata.
 
-Editing is performed directly on your local files.
+Your music stays on your computer.
 
 ---
 
-# 🧪 Recommendation for your first test
+# 🧪 Recommended First Test
 
-Before editing an important song for the first time, make a copy of it.
+Before editing an important file for the first time, create a copy.
 
 For example:
 
@@ -425,7 +421,7 @@ For example:
 original-song.mp3
 ```
 
-Create:
+Create a copy named:
 
 ```text
 test-song.mp3
@@ -439,33 +435,33 @@ Change:
 Title
 Artist
 Album
-Cover
+Cover Art
 Filename
 ```
 
-Press:
+Then click:
 
 ```text
-Guardar cambios
+Save changes
 ```
 
-Then open the file in your normal music player or check its properties in Windows.
+After saving, open the file in your normal music player or check its properties in Windows.
 
-Once you confirm everything works as expected, you can start editing your normal library.
+Once you confirm everything works as expected, you can use YT Music Tagger with your normal music library.
 
 ---
 
-# 🛠️ Running from source
+# 🛠️ Running From Source
 
-If you prefer using the command line, open a terminal inside the project folder.
+If you prefer to run the application manually from the command line, open Command Prompt or PowerShell inside the project folder.
 
-Install dependencies:
+Install the dependencies:
 
 ```bash
 npm install
 ```
 
-Run the application:
+Then run:
 
 ```bash
 npm start
@@ -473,11 +469,9 @@ npm start
 
 ---
 
-# 📦 Building the Windows installer
+# 📦 Building the Windows Installer
 
-YT Music Tagger can also be packaged as a normal Windows application.
-
-First install the dependencies:
+To create a Windows installer, first install the dependencies:
 
 ```bash
 npm install
@@ -489,13 +483,13 @@ Then run:
 npm run build
 ```
 
-Or simply double-click:
+You can also simply double-click:
 
 ```text
-CREAR_EXE.bat
+BUILD_EXE.bat
 ```
 
-After the build finishes, check the:
+After the build process finishes, open the:
 
 ```text
 dist
@@ -503,17 +497,17 @@ dist
 
 folder.
 
-You should find an installer similar to:
+You should find a Windows installer similar to:
 
 ```text
-YT Music Tagger Setup 1.0.0.exe
+YT Music Tagger Setup 1.1.0.exe
 ```
 
-After installing it, YT Music Tagger can be opened like a regular Windows application.
+After installing it, YT Music Tagger can be opened like a normal Windows application.
 
 ---
 
-# 📝 Supported audio formats
+# 🎶 Supported Audio Formats
 
 Current version:
 
@@ -521,66 +515,83 @@ Current version:
 ✅ MP3
 ```
 
-The application currently focuses only on MP3 files to keep metadata editing simple and reliable.
+YT Music Tagger currently focuses only on MP3 files to keep metadata editing simple and reliable.
 
 Possible future support may include:
 
 ```text
 FLAC
 M4A
-WAV
 OGG
+WAV
 ```
 
 ---
 
-# 🚧 Planned improvements
+# 🚧 Planned Features
 
-Possible features for future versions include:
+Possible future improvements include:
 
-- Multiple-song editing
-- Song library view
+- Multi-song editing
 - Batch metadata editing
-- Batch album assignment
-- Batch cover assignment
+- Music library view
+- Batch album editing
+- Batch artist editing
+- Batch cover art assignment
 - Automatic track numbering
 - FLAC support
 - M4A support
+- OGG support
 - Better drag-and-drop management
-- Windows installer improvements
-- Portable version
+- Portable Windows version
 - Automatic updates
+- Improved Windows installer
+- Additional metadata fields
 
 ---
 
 # 🧰 Built With
 
+YT Music Tagger is built using:
+
 - Electron
+- Node.js
 - JavaScript
 - HTML
 - CSS
-- Node.js
 - node-id3
 - electron-builder
 
 ---
 
-# ❤️ Purpose
+# ❤️ Project Goal
 
-YT Music Tagger was created to make organizing personal MP3 collections easier.
-
-Instead of using complicated professional tagging applications, the goal is to provide a simple interface where you can:
+The goal of YT Music Tagger is to provide a simple workflow:
 
 ```text
 Open → Edit → Add Cover → Save
 ```
 
-That's it.
+No complicated menus.
+
+No unnecessary tools.
+
+Just simple MP3 metadata editing.
 
 ---
 
-## ⭐ Support the project
+# ⚠️ Disclaimer
 
-If YT Music Tagger is useful to you, consider giving the repository a ⭐.
+YT Music Tagger is an independent open-source project.
 
-Bug reports, ideas and suggestions are welcome through GitHub Issues.
+It is not affiliated with, endorsed by, sponsored by, or officially connected with YouTube, YouTube Music, or Google.
+
+YouTube and YouTube Music are trademarks of Google LLC.
+
+---
+
+# ⭐ Support the Project
+
+If you find YT Music Tagger useful, consider giving the repository a ⭐.
+
+Bug reports, improvements and feature suggestions are welcome through GitHub Issues.
